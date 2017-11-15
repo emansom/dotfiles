@@ -1,0 +1,2 @@
+# Ignore Vim plugin dependencies
+.vim/plugged/*
