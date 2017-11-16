@@ -1,2 +1,3 @@
 # Ignore Vim plugin dependencies
 .vim/plugged/*
+.vim/.netrwhist
