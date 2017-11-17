@@ -1,0 +1,27 @@
+export EDITOR=vim
+
+# NPM packages in homedir
+export NPM_PACKAGES="$HOME/.npm-packages"
+
+# Tell our environment about user-installed node tools
+export PATH="$NPM_PACKAGES/bin:$PATH"
+# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
+unset MANPATH  # delete if you already modified MANPATH elsewhere in your configuration
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+# Tell Node about these packages
+export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
+
+export WORKON_HOME=~/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv2
+
+source /usr/bin/virtualenvwrapper_lazy.sh
+
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK="/run/user/${UID}/gnupg/S.gpg-agent.ssh"
+
+gpgconf --launch gpg-agent
