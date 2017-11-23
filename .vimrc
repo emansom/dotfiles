@@ -7,6 +7,7 @@ call plug#begin()
 Plug 'fgsch/vim-varnish'
 Plug 'ap/vim-buftabline'
 Plug 'fatih/vim-go'
+Plug 'Chiel92/vim-autoformat'
 
 " Initialize plugin system
 call plug#end()
@@ -21,3 +22,14 @@ nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 noremap <F3> :set invnumber<CR>
 inoremap <F3> <C-O>:set invnumber<CR>
+
+" disable vim-go auto-gofmt, because we use vim-autoformat
+let g:go_fmt_autosave = 0
+
+" Disable the fallback to vim's indent file
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
+
+" trigger vim-autoformat on save
+au BufWrite * :Autoformat
