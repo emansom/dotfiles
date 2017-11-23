@@ -30,8 +30,9 @@ let g:go_fmt_autosave = 0
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
-let g:autoformat_verbosemode = 1
 
+" Default definition used tabs, I want my JavaScript to look the same for all
+" my colleagues, so, we have to override it
 let g:formatdef_jsbeautify_javascript = '"js-beautify"'
 
 
