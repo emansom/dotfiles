@@ -8,6 +8,7 @@ Plug 'fgsch/vim-varnish'
 Plug 'ap/vim-buftabline'
 Plug 'fatih/vim-go'
 Plug 'Chiel92/vim-autoformat'
+Plug 'chr4/nginx.vim'
 
 " Initialize plugin system
 call plug#end()
