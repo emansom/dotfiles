@@ -11,6 +11,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'chr4/nginx.vim'
 Plug 'chr4/sslsecure.vim'
 Plug 'ciaranm/securemodelines'
+Plug 'scrooloose/nerdcommenter'
 
 " Initialize plugin system
 call plug#end()
@@ -22,10 +23,14 @@ let g:monokai_term_italic = 1
 set number
 set hidden
 set nomodeline
+set timeout timeoutlen=1500
+filetype plugin on
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 noremap <F3> :set invnumber<CR>
 inoremap <F3> <C-O>:set invnumber<CR>
+
+let g:mapleader = ","
 
 " disable vim-go auto-gofmt, because we use vim-autoformat
 let g:go_fmt_autosave = 0
