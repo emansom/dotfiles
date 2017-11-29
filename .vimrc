@@ -20,6 +20,7 @@ set t_Co=256 " vim-monokai now only support 256 colours in terminal.
 let g:monokai_term_italic = 1
 set number
 set hidden
+set modeline
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 noremap <F3> :set invnumber<CR>
