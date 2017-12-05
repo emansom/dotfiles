@@ -46,4 +46,5 @@ let g:formatdef_jsbeautify_javascript = '"js-beautify"'
 
 
 " trigger vim-autoformat on save
-au BufWrite * :Autoformat
+autocmd BufWrite * :Autoformat
+autocmd BufEnter * :syntax sync fromstart
