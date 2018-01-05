@@ -1,0 +1,6 @@
+[user]
+	email = ewout@freedom.nl
+	name = Ewout van Mansom
+	signingkey = D4B5A62DD74CB9AD
+[commit]
+	gpgsign = true
