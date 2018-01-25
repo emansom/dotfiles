@@ -27,4 +27,6 @@ export PATH=$PATH:$GOPATH/bin
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK="/run/user/${UID}/gnupg/S.gpg-agent.ssh"
 
+stty -ixon
+
 gpgconf --launch gpg-agent
