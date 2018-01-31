@@ -1,6 +1,3 @@
-# Always save history
-export SAVEHIST=100
- 
 export EDITOR=vim
 
 # NPM packages in homedir
@@ -18,6 +15,7 @@ export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
 
+export PATH=$PATH:~/.local/bin
 #export WORKON_HOME=~/.virtualenvs
 #export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
 #export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv2
@@ -29,4 +27,5 @@ export SSH_AUTH_SOCK="/run/user/${UID}/gnupg/S.gpg-agent.ssh"
 
 stty -ixon
 
-gpgconf --launch gpg-agent
+export DIRSTACKSIZE=0
+export DIRSTACKFILE=/dev/null
