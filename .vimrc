@@ -12,13 +12,21 @@ Plug 'chr4/nginx.vim'
 Plug 'chr4/sslsecure.vim'
 Plug 'ciaranm/securemodelines'
 Plug 'scrooloose/nerdcommenter'
+"Plug 'morhetz/gruvbox'
+Plug 'crusoexia/vim-monokai'
 
 " Initialize plugin system
 call plug#end()
 
 syntax on
+"set background=dark    " Setting dark mode
+"let g:gruvbox_italic = 1
+"let g:gruvbox_contrast_light = 'soft'
+"let g:gruvbox_contrast_dark = 'soft'
+"colorscheme gruvbox
+set termguicolors
 colorscheme monokai
-set t_Co=256 " vim-monokai now only support 256 colours in terminal.
+"set t_Co=256 " vim-monokai now only support 256 colours in terminal.
 let g:monokai_term_italic = 1
 set number
 set hidden
