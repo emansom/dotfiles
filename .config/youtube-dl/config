@@ -1,5 +1,5 @@
 # Save in ~/Videos
 -o ~/Videos/%(title)s.%(ext)s
 
-# Prefer 720p or lower resolutions
+# Prefer 720p or lower resolutions and h264 (mp4) to make use of VAAPI/VDPAU (hardware video decoding) effectively
 -f (bestvideo[height<=720+ext=mp4]/bestvideo)+bestaudio/best[height<=720+ext=m4a]/best
