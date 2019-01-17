@@ -24,6 +24,7 @@ syntax on
 "let g:gruvbox_contrast_light = 'soft'
 "let g:gruvbox_contrast_dark = 'soft'
 "colorscheme gruvbox
+set mouse-=a
 set termguicolors
 colorscheme monokai
 "set t_Co=256 " vim-monokai now only support 256 colours in terminal.
