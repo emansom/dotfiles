@@ -96,13 +96,16 @@ export EDITOR=vim
 export GOPATH=$HOME/go
 path+=("$GOPATH/bin")
 
+{{- if .gpgsshagent }}
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+gpg-connect-agent updatestartuptty /bye > /dev/null
+{{- end }}
+
 export _YTEC_EMPOWER_CHECK_SSH_KEYS=false
 export YTEC_MYSQL_HOST=127.0.0.1
 
 alias docker-compose=podman-compose
-gpg-connect-agent updatestartuptty /bye > /dev/null
 
 # Always colors in iostat
 export S_COLORS=always

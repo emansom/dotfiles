@@ -1,0 +1,22 @@
+[pull]
+	ff = only
+[user]
+	name = "Ewout van Mansom"
+	email = {{ .email | quote }}
+	{{- if .gpgid }}
+	{{- if gt (len .gpgid) 0 }}
+	signingkey = {{ .gpgid | quote }}
+	{{- end }}
+	{{- end }}
+[color]
+	ui = true
+[format]
+	pretty = oneline
+{{- if .gpgid }}
+{{- if gt (len .gpgid) 0 }}
+[commit]
+	gpgsign = true
+{{- end }}
+{{- end }}
+[init]
+	defaultBranch = main
