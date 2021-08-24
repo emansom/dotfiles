@@ -8,17 +8,17 @@
 [user]
 	name = "Ewout van Mansom"
 	email = {{ .email | quote }}
-	{{- if .gpgid }}
-	{{- if gt (len .gpgid) 0 }}
-	signingkey = {{ .gpgid | quote }}
+	{{- if .gpg_id }}
+	{{- if gt (len .gpg_id) 0 }}
+	signingkey = {{ .gpg_id | quote }}
 	{{- end }}
 	{{- end }}
 [color]
 	ui = true
 [format]
 	pretty = oneline
-{{- if .gpgid }}
-{{- if gt (len .gpgid) 0 }}
+{{- if .gpg_id }}
+{{- if gt (len .gpg_id) 0 }}
 [commit]
 	gpgsign = true
 {{- end }}
