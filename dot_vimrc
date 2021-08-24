@@ -77,11 +77,12 @@ let g:autoformat_remove_trailing_spaces = 0
 " my colleagues, so, we have to override it
 let g:formatdef_jsbeautify_javascript = '"js-beautify"'
 
+" Only use black as python formatter
+let g:formatters_python = ['black']
 
 " trigger vim-autoformat on save
 autocmd BufWrite * :Autoformat
 autocmd BufEnter * :syntax sync fromstart
-
 
 " Don't backup files in temp directories or shm
 if exists('&backupskip')
