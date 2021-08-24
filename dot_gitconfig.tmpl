@@ -25,8 +25,8 @@
 {{- end }}
 [push]
 	default = simple
-[url "ssh://git@gitlab.ytec.nl"]
-	insteadOf = https://gitlab.ytec.nl
+[url "ssh://git@gitlab.{{ .corp }}.nl"]
+	insteadOf = https://gitlab.{{ .corp }}.nl
 [url "ssh://git@github.com"]
 	insteadOf = https://github.com
 [init]

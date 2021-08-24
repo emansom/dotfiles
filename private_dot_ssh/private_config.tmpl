@@ -1,0 +1,24 @@
+Host *.{{ .corp }} *.{{ .corp }}.nl
+  Port 20022
+
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+  User git
+
+Host gitlab.{{ .corp }}.nl
+  Port 20022
+  User git
+
+Host ams3-edge
+  Hostname {{ .edgeip }}
+
+Host enthoo
+  Hostname 127.0.0.1
+  Port 10022
+  ProxyJump ams3-edge
+
+Host dropboxsyncer
+  Hostname submarine.{{ .corp }}.nl
+  Port 20022
+  User dropboxsyncer
