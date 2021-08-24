@@ -1,5 +1,10 @@
 [pull]
 	ff = only
+	rebase = true
+[fetch]
+	prune = true
+[diff]
+	colorMoved = zebra
 [user]
 	name = "Ewout van Mansom"
 	email = {{ .email | quote }}
@@ -18,5 +23,11 @@
 	gpgsign = true
 {{- end }}
 {{- end }}
+[push]
+	default = simple
+[url "ssh://git@gitlab.ytec.nl"]
+	insteadOf = https://gitlab.ytec.nl
+[url "ssh://git@github.com"]
+	insteadOf = https://github.com
 [init]
 	defaultBranch = main
