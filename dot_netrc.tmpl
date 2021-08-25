@@ -1,1 +1,0 @@
-machine gitlab.{{ .corp }}.nl login {{ .chezmoi.username }} password {{ (bitwarden "item" "secret-corp-gitlab-token").login.password }}
