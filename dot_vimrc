@@ -38,6 +38,8 @@ Plug 'scrooloose/nerdcommenter'
 "Plug 'morhetz/gruvbox'
 Plug 'crusoexia/vim-monokai'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'ActivityWatch/aw-watcher-vim'
+Plug 'wakatime/vim-wakatime'
 
 call plug#end()
 
