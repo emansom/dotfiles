@@ -1,0 +1,55 @@
+{
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange",
+    "[shellscript]": {
+        "editor.formatOnSave": false
+    },
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "explorer.confirmDelete": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        ".vscode": true,
+        "**/*.pyc": true,
+    },
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "workbench.editor.enablePreview": false,
+    "editor.minimap.enabled": false,
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_django"
+    ],
+    "python.venvPath": "${workspaceFolder}/virtual/",
+    "python.analysis.extraPaths": [
+        "./website"
+    ],
+    "python.experiments.enabled": false,
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "~/Projects/ytec-tooling/usr/local/bin/black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "120"
+    ],
+    "update.mode": "manual",
+    "files.associations": {
+        "**/*.html": "html",
+        "**/templates/**/*.html": "django-html",
+        "**/templates/**/*": "django-txt",
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+}
