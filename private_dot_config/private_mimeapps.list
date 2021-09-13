@@ -1,4 +1,5 @@
 [Added Associations]
+image/svg+xml=org.gnome.eog.desktop;
 image/png=pinta.desktop;
 image/jpeg=pinta.desktop;
 video/mp4=io.github.celluloid_player.Celluloid.desktop;
