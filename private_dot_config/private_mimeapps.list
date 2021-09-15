@@ -206,3 +206,4 @@ video/x-nsv=io.github.celluloid_player.Celluloid.desktop
 video/x-theora=io.github.celluloid_player.Celluloid.desktop
 video/x-theora+ogg=io.github.celluloid_player.Celluloid.desktop
 x-scheme-handler/mailto=org.gnome.Geary.desktop
+x-scheme-handler/discord-455712169795780630=discord-455712169795780630.desktop
