@@ -1,0 +1,31 @@
+[server_{{ .corp_upper }} Icinga]
+enabled = True
+type = IcingaWeb2
+name = {{ .corp_upper }} Icinga
+monitor_url = https://monitoring.{{ .corp }}.nl/icingaweb2
+monitor_cgi_url = https://monitoring.{{ .corp }}.nl/icingaweb2
+username = {{ .corp_icinga_username }}
+password = {{ .corp_icinga_password }}
+save_password = True
+use_proxy = False
+use_proxy_from_os = False
+timeout = 10
+show_options = True
+ignore_cert = False
+custom_cert_use = False
+custom_cert_ca_file = 
+use_autologin = False
+use_display_name_host = False
+use_display_name_service = False
+no_cookie_auth = False
+force_authuser = False
+checkmk_view_hosts = nagstamon_hosts
+checkmk_view_services = nagstamon_svc
+host_filter = state !=0
+service_filter = state !=0 or host.state != 0
+monitor_site = Site 1
+use_description_name_service = False
+map_to_hostname = pod_name,namespace,instance
+map_to_servicename = alertname
+map_to_status_information = message,summary,description
+
