@@ -2,7 +2,7 @@
 image/svg+xml=org.gnome.eog.desktop;
 image/png=pinta.desktop;org.gnome.eog.desktop;
 image/jpeg=pinta.desktop;
-video/mp4=io.github.celluloid_player.Celluloid.desktop;
+video/mp4=vlc.desktop;io.github.celluloid_player.Celluloid.desktop;
 video/x-matroska=vlc.desktop;io.github.celluloid_player.Celluloid.desktop;
 application/x-cd-image=gnome-disk-image-writer.desktop;
 audio/3gpp=io.github.celluloid_player.Celluloid.desktop;
@@ -102,7 +102,7 @@ video/x-nsv=io.github.celluloid_player.Celluloid.desktop;
 video/x-theora=io.github.celluloid_player.Celluloid.desktop;
 video/x-theora+ogg=io.github.celluloid_player.Celluloid.desktop;
 x-scheme-handler/mailto=org.gnome.Geary.desktop;
-application/pdf=org.gnome.Evince.desktop;
+application/pdf=chromium.desktop;firefox.desktop;libreoffice-draw.desktop;org.gnome.Evince.desktop;
 x-scheme-handler/http=firefox.desktop;
 text/html=firefox.desktop;
 application/xhtml+xml=firefox.desktop;
