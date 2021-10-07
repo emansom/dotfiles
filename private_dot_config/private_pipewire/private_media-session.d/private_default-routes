@@ -1,0 +1,16 @@
+{
+ "default.route.alsa_card.pci-0000_04_00.1:profile:off": [ ],
+ "default.route.alsa_card.pci-0000_04_00.6:profile:off": [ ],
+ "default.route.alsa_card.pci-0000_04_00.6:profile:output:analog-stereo+input:analog-stereo": [ "analog-output-speaker" ],
+ "default.route.bluez_card.70_BF_92_A2_77_9B:profile:a2dp-sink-sbc": [ "headset-output" ],
+ "default.route.alsa_card.pci-0000_04_00.6:output:analog-output-speaker": { "mute": false, "volumes": [ 0.174611, 0.174611 ], "channels": [ "FL", "FR" ] },
+ "default.route.alsa_card.usb-Lenovo_ThinkPad_Thunderbolt_3_Dock_USB_Audio_000000000000-00:profile:off": [ ],
+ "default.route.alsa_card.usb-Lenovo_ThinkPad_Thunderbolt_3_Dock_USB_Audio_000000000000-00:profile:output:analog-stereo+input:mono-fallback": [ ],
+ "default.route.alsa_card.pci-0000_05_00.1:profile:off": [ ],
+ "default.route.alsa_card.pci-0000_05_00.6:profile:off": [ ],
+ "default.route.alsa_card.pci-0000_05_00.6:profile:output:analog-stereo+input:analog-stereo": [ "analog-output-speaker" ],
+ "default.route.alsa_card.pci-0000_05_00.6:output:analog-output-speaker": { "mute": false, "volumes": [ 0.000216, 0.000216 ], "channels": [ "FL", "FR" ] },
+ "default.route.bluez_card.94_DB_56_7F_2B_E9:profile:a2dp-sink-ldac": [ "headset-output" ],
+ "default.route.bluez_card.94_DB_56_7F_2B_E9:output:headset-output": { "mute": false, "volumes": [ 0.072680, 0.072680 ], "channels": [ "FL", "FR" ], "latencyOffsetNsec": 0 },
+ "default.route.bluez_card.70_BF_92_A2_77_9B:output:headset-output": { "mute": false, "volumes": [ 0.061024, 0.061024 ], "channels": [ "FL", "FR" ], "latencyOffsetNsec": 0 }
+}
