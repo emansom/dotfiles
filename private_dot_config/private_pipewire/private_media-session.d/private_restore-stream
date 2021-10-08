@@ -1,7 +1,27 @@
 {
+ "restore.stream.Output/Audio.application.name:ALSA plug-in [gnome-shell]": { "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Input/Audio.application.name:GNOME Settings": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Output/Audio.media.role:Test": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000 ], "channels": [ "FL" ] },
  "restore.stream.Output/Audio.media.role:Notification": { "volume": 1.000000, "mute": true, "volumes": [ 0.000000, 0.000000 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Output/Audio.application.name:Firefox": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
- "restore.stream.Output/Audio.application.name:Chromium": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] }
+ "restore.stream.Output/Audio.application.name:Chromium": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Output/Audio.application.name:speech-dispatcher-dummy": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000 ], "channels": [ "MONO" ] },
+ "restore.stream.Output/Audio.media.role:Test": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000 ], "channels": [ "FL" ] },
+ "restore.stream.Input/Audio.application.name:PulseAudio-volumeregeling": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Output/Audio.application.name:virt-manager": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Input/Audio.application.name:virt-manager": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Output/Audio.application.name:Blanket": { "volume": 1.000000, "mute": false, "volumes": [ 0.200005, 0.200005 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Output/Audio.application.name:Kooha": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000 ], "channels": [ "MONO" ] },
+ "restore.stream.Output/Audio.media.role:Movie": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "UNK", "UNK" ] },
+ "restore.stream.Output/Audio.media.role:alarm": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Input/Audio.application.name:Chromium input": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Output/Audio.application.name:gnome-shell": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Input/Audio.node.name:NoiseTorch Microphone": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Audio/Source.node.name:NoiseTorch Microphone": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000 ], "channels": [ "MONO" ] },
+ "restore.stream.Output/Audio.application.name:eSpeak": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000 ], "channels": [ "MONO" ] },
+ "restore.stream.Output/Audio.application.name:speech-dispatcher-espeak-ng": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000 ], "channels": [ "MONO" ], },
+ "restore.stream.Output/Audio.application.name:mpv": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Output/Audio.application.name:io.github.celluloid_player.Celluloid": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Input/Audio.media.role:Production": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Output/Audio.media.role:Production": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] }
 }
