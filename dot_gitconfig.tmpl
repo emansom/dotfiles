@@ -6,8 +6,14 @@
 [diff]
 	colorMoved = zebra
 [user]
-	name = "Ewout van Mansom"
-	email = {{ .email | quote }}
+	name = {{ .full_name | quote }}
+{{- if eq .chezmoi.hostname "3500X" }}
+	email = {{ .email_corp | quote }}
+{{- else if eq .chezmoi.hostname "E14G3" }}
+	email = {{ .email_corp | quote }}
+{{- else }}
+	email = {{ .email_personal | quote }}
+{{- end }}
 	{{- if .gpg_id }}
 	{{- if gt (len .gpg_id) 0 }}
 	signingkey = {{ .gpg_id | quote }}
