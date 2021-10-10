@@ -31,3 +31,17 @@
 	insteadOf = https://github.com
 [init]
 	defaultBranch = main
+[pager]
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+[interactive]
+	diffFilter = delta --color-only --features=interactive
+[delta]
+	side-by-side = true
+	line-numbers = true
+	syntax-theme = Monokai Extended Bright
+	features = mantis-shrimp
+[include]
+	path = ~/.local/share/delta/themes.gitconfig
