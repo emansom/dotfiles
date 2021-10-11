@@ -109,7 +109,7 @@
  '(custom-safe-themes
    '("d9646b131c4aa37f01f909fbdd5a9099389518eb68f25277ed19ba99adeb7279" default))
  '(package-selected-packages
-   '(org-alert revbufs wakatime-mode magit cheatsheet simple-httpd websocket company-box company which-key lsp-treemacs lsp-ivy lsp-ui lsp-mode org-roam ivy-prescient prescient wgrep flx counsel ivy-rich ivy-hydra ivy command-log-mode use-package monokai-theme)))
+   '(org-redmine org-alert revbufs wakatime-mode magit cheatsheet simple-httpd websocket company-box company which-key lsp-treemacs lsp-ivy lsp-ui lsp-mode org-roam ivy-prescient prescient wgrep flx counsel ivy-rich ivy-hydra ivy command-log-mode use-package monokai-theme)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -301,6 +301,12 @@
 
 (use-package org-alert
   :ensure t)
+
+(use-package org-redmine
+  :ensure t
+  :init
+  (setq org-redmine-uri "{{ (bitwardenFields "item" "corp_redmine").addr.value }}")
+  (setq org-redmine-auth-api-key "{{ (bitwardenFields "item" "corp_redmine").api_key.value }}"))
 
 ;(setq auto-revert-notify-exclude-dir-regexp
 ;      (concat
