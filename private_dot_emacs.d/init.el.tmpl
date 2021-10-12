@@ -109,7 +109,7 @@
  '(custom-safe-themes
    '("d9646b131c4aa37f01f909fbdd5a9099389518eb68f25277ed19ba99adeb7279" default))
  '(package-selected-packages
-   '(org-redmine org-alert revbufs wakatime-mode magit cheatsheet simple-httpd websocket company-box company which-key lsp-treemacs lsp-ivy lsp-ui lsp-mode org-roam ivy-prescient prescient wgrep flx counsel ivy-rich ivy-hydra ivy command-log-mode use-package monokai-theme)))
+   '(org-gcal org-redmine org-alert revbufs wakatime-mode magit cheatsheet simple-httpd websocket company-box company which-key lsp-treemacs lsp-ivy lsp-ui lsp-mode org-roam ivy-prescient prescient wgrep flx counsel ivy-rich ivy-hydra ivy command-log-mode use-package monokai-theme)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -308,6 +308,61 @@
   (setq org-redmine-uri "{{ (bitwardenFields "item" "corp_redmine").addr.value }}")
   (setq org-redmine-auth-api-key "{{ (bitwardenFields "item" "corp_redmine").api_key.value }}"))
 
+(defun my-org-gcal-set-scheduled (_calendar-id event _update-mode)
+  "Set SCHEDULED property based on EVENT if it's not an recurring event with old start."
+  (let*
+      ((stime (plist-get (plist-get event :start)
+                         :dateTime))
+       (etime (plist-get (plist-get event :end)
+                         :dateTime))
+       (sday  (plist-get (plist-get event :start)
+                         :date))
+       (eday  (plist-get (plist-get event :end)
+                         :date))
+       (start (if stime (org-gcal--convert-time-to-local-timezone stime org-gcal-local-timezone) sday))
+       (end   (if etime (org-gcal--convert-time-to-local-timezone etime org-gcal-local-timezone) eday))
+       (old-time-desc (org-gcal--get-time-and-desc))
+       (old-start (plist-get old-time-desc :start))
+       (old-end (plist-get old-time-desc :start))
+       (recurrence (plist-get event :recurrence))
+       (timestamp
+        (if (or (string= start end) (org-gcal--alldayp start end))
+            (org-gcal--format-iso2org start)
+          (if (and
+               (= (plist-get (org-gcal--parse-date start) :year)
+                  (plist-get (org-gcal--parse-date end)   :year))
+               (= (plist-get (org-gcal--parse-date start) :mon)
+                  (plist-get (org-gcal--parse-date end)   :mon))
+               (= (plist-get (org-gcal--parse-date start) :day)
+                  (plist-get (org-gcal--parse-date end)   :day)))
+              (format "<%s-%s>"
+                      (org-gcal--format-date start "%Y-%m-%d %a %H:%M")
+                      (org-gcal--format-date end "%H:%M"))
+            (format "%s--%s"
+                    (org-gcal--format-iso2org start)
+                    (org-gcal--format-iso2org
+                     (if (< 11 (length end))
+                         end
+                       (org-gcal--iso-previous-day end))))))))
+    (unless (and recurrence old-start) (org-schedule nil timestamp))))
+
+(use-package org-gcal
+  :after org
+  :config
+  (setq org-gcal-client-id {{ (bitwardenFields "item" "eea4dd69-73aa-4351-8c58-69eb7f2f4e9e").gcal_client_id.value | quote }}
+        org-gcal-client-secret {{ (bitwardenFields "item" "eea4dd69-73aa-4351-8c58-69eb7f2f4e9e").gcal_client_secret.value | quote }}
+        org-gcal-file-alist '(({{ .email_google | quote }} . "{{ .tramp_addr }}:/Documents/org/gcal-personal.org")
+			      ({{ .email_corp | quote }} . "{{ .tramp_addr }}:/Documents/org/gcal-work.org")
+			      ({{ .email_corp_shared | quote }} . "{{ .tramp_addr }}:/Documents/org/gcal-work-shared.org"))
+        org-gcal-header-alist '(("{{ .email_google }}" . "#+PROPERTY: TIMELINE_FACE \"pink\"\n"))
+        org-gcal-auto-archive nil
+        org-gcal-notify-p nil
+	org-gcal-local-timezone "Europe/Amsterdam")
+
+  (add-hook 'org-agenda-mode-hook 'org-gcal-fetch)
+  (add-hook 'org-capture-after-finalize-hook 'org-gcal-fetch)
+  (add-hook 'org-gcal-after-update-entry-functions #'my-org-gcal-set-scheduled))
+
 ;(setq auto-revert-notify-exclude-dir-regexp
 ;      (concat
 ;       ;; No mounted file systems.
@@ -427,7 +482,9 @@
 		      '(:key "C-c n S-c r" :description "capture new note/task for tommorow")
 		      '(:key "C-c n t" :description "show notes captured today")
 		      '(:key "C-c n y" :description "show notes captured yesterday")
-		      '(:key "C-c n r" :description "show notes captured tommorow"))
+		      '(:key "C-c n r" :description "show notes captured tommorow")
+		      '(:key "C-c n i" :description "insert link to new or existing Zettelkast")
+		      '(:key "C-c n f" :description "find or create Zettelkast"))
   (cheatsheet-add-group 'Org
 			'(:key "C-c C-t" :description "toggle task state (switch between TODO, DOING and DONE)")
 		      '(:key "C-c n C-r" :description "reload all Org files from disk")))
