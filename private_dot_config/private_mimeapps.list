@@ -2,7 +2,7 @@
 image/svg+xml=org.gnome.eog.desktop;
 image/png=pinta.desktop;org.gnome.eog.desktop;
 image/jpeg=pinta.desktop;
-video/mp4=vlc.desktop;io.github.celluloid_player.Celluloid.desktop;
+video/mp4=mpv.desktop;vlc.desktop;io.github.celluloid_player.Celluloid.desktop;
 video/x-matroska=vlc.desktop;io.github.celluloid_player.Celluloid.desktop;
 application/x-cd-image=gnome-disk-image-writer.desktop;
 audio/3gpp=io.github.celluloid_player.Celluloid.desktop;
