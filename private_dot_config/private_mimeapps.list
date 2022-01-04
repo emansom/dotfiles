@@ -127,6 +127,8 @@ image/x-pcx=org.gnome.eog.desktop;
 image/svg+xml-compressed=org.gnome.eog.desktop;
 image/vnd.wap.wbmp=org.gnome.eog.desktop;
 image/x-icns=org.gnome.eog.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-D22WC1.desktop;
+application/x-partial-download=io.github.celluloid_player.Celluloid.desktop;
 
 [Default Applications]
 audio/x-vorbis+ogg=io.github.celluloid_player.Celluloid.desktop
@@ -258,3 +260,5 @@ image/svg+xml=org.gnome.eog.desktop
 image/svg+xml-compressed=org.gnome.eog.desktop
 image/vnd.wap.wbmp=org.gnome.eog.desktop
 image/x-icns=org.gnome.eog.desktop
+application/x-xdg-protocol-tg=telegramdesktop.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-D22WC1.desktop
